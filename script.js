@@ -4,7 +4,7 @@ let sessions = {};
 let currentEditingSlot = null;
 
 const timeSlots = ['8:00-8:45', '10:00-10:45', '12:00-12:45', '3:15-4:00'];
-const days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+const days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'];
 
 // Initialize the calendar structure
 function initializeCalendar() {
@@ -322,3 +322,4 @@ window.addEventListener('click', function(event) {
         closeModal();
     }
 });
+

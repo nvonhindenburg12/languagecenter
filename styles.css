@@ -73,7 +73,7 @@ body {
 
 .days-header {
   display: grid;
-  grid-template-columns: 80px repeat(7, 1fr);
+  grid-template-columns: 80px repeat(5, 1fr);
   gap: 10px;
   margin-bottom: 10px;
 }
@@ -90,7 +90,7 @@ body {
 
 .time-slot-row {
   display: grid;
-  grid-template-columns: 80px repeat(7, 1fr);
+  grid-template-columns: 80px repeat(5, 1fr);
   gap: 10px;
   margin-bottom: 10px;
 }
@@ -325,7 +325,7 @@ body {
 .stat-value {
   font-size: 2em;
   font-weight: bold;
-  color: #288a04;
+  color: #288a04;;
 }
 
 .stat-label {
