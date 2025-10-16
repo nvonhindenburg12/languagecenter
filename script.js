@@ -259,10 +259,6 @@ function updateSummary() {
             <div class="stat-label">Total Sessions</div>
         </div>
         <div class="stat-card">
-            <div class="stat-value">${languages.size}</div>
-            <div class="stat-label">Languages Covered</div>
-        </div>
-        <div class="stat-card">
             <div class="stat-value">${mentors.size}</div>
             <div class="stat-label">Active Mentors</div>
         </div>
