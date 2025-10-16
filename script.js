@@ -72,8 +72,10 @@ function openModal(timeSlot, day) {
     document.getElementById('language').value = '';
     document.getElementById('mentorName').value = '';
     document.getElementById('mentorGrade').value = '';
+    document.getElementById('mentorTeacher').value = '';
     document.getElementById('menteeName').value = '';
     document.getElementById('menteeGrade').value = '';
+    document.getElementById('menteeTeacher').value = '';
     document.getElementById('sessionNotes').value = '';
     
     // Check if editing existing session

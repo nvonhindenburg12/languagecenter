@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Language Mentor Log Calendar</title>
+    <title>Language Center Log</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
         <div class="header">
-            <h1>🌍 Language Mentor Log</h1>
-            <p>Track mentoring sessions across all languages</p>
+            <h1>Language Center Log</h1>
+            <!-- <p>Track mentoring sessions across all languages</p> -->
             <div class="week-selector">
                 <button onclick="changeWeek(-1)">← Previous Week</button>
-                <div class="week-display" id="weekDisplay">Week of January 6, 2025</div>
+                <div class="week-display" id="weekDisplay">Week of October 13, 2025</div>
                 <button onclick="changeWeek(1)">Next Week →</button>
             </div>
         </div>
@@ -28,10 +28,6 @@
                 <div class="stat-card">
                     <div class="stat-value">0</div>
                     <div class="stat-label">Total Sessions</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-value">0</div>
-                    <div class="stat-label">Languages Covered</div>
                 </div>
                 <div class="stat-card">
                     <div class="stat-value">0</div>
@@ -60,10 +56,7 @@
                         <option value="Spanish">Spanish</option>
                         <option value="French">French</option>
                         <option value="Latin">Latin</option>
-                        <option value="German">German</option>
-                        <option value="Italian">Italian</option>
                         <option value="Chinese">Chinese</option>
-                        <option value="Japanese">Japanese</option>
                     </select>
                 </div>
                 <div class="form-group">
@@ -74,11 +67,14 @@
                     <label for="mentorGrade">Mentor Grade</label>
                     <select id="mentorGrade">
                         <option value="">Select Grade</option>
-                        <option value="9">9th</option>
                         <option value="10">10th</option>
                         <option value="11">11th</option>
                         <option value="12">12th</option>
                     </select>
+                </div>
+                <div class="form-group">
+                  <label for="mentorTeacher">Mentor Teacher</label>
+                  <input type="text" id="mentorTeacher" placeholder="Enter mentor's teacher">
                 </div>
                 <div class="form-group">
                     <label for="menteeName">Mentee Name</label>
@@ -93,6 +89,10 @@
                         <option value="11">11th</option>
                         <option value="12">12th</option>
                     </select>
+                    <div class="form-group">
+                      <label for="menteeTeacher">Mentee Teacher</label>
+                      <input type="text" id="menteeTeacher" placeholder="Enter mentee's teacher">
+                    </div>
                 </div>
                 <div class="form-group">
                     <label for="sessionNotes">What was covered? (Topics, Activities, etc.)</label>
