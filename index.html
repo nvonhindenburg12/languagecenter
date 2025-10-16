@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Language Mentor Log Calendar</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🌍 Language Mentor Log</h1>
+            <p>Track mentoring sessions across all languages</p>
+            <div class="week-selector">
+                <button onclick="changeWeek(-1)">← Previous Week</button>
+                <div class="week-display" id="weekDisplay">Week of January 6, 2025</div>
+                <button onclick="changeWeek(1)">Next Week →</button>
+            </div>
+        </div>
+
+        <div class="calendar-grid" id="calendarGrid">
+            <!-- Calendar will be generated here -->
+        </div>
+
+        <div class="summary-section">
+            <h2 class="summary-title">Weekly Summary</h2>
+            <div class="summary-stats" id="summaryStats">
+                <div class="stat-card">
+                    <div class="stat-value">0</div>
+                    <div class="stat-label">Total Sessions</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">0</div>
+                    <div class="stat-label">Languages Covered</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">0</div>
+                    <div class="stat-label">Active Mentors</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">0</div>
+                    <div class="stat-label">Minutes Tutored</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for adding/editing sessions -->
+    <div id="sessionModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modalTitle">Log Mentoring Session</h2>
+                <button class="close-btn" onclick="closeModal()">&times;</button>
+            </div>
+            <div id="sessionForm">
+                <div class="form-group">
+                    <label for="language">Language</label>
+                    <select id="language">
+                        <option value="">Select Language</option>
+                        <option value="Spanish">Spanish</option>
+                        <option value="French">French</option>
+                        <option value="Latin">Latin</option>
+                        <option value="German">German</option>
+                        <option value="Italian">Italian</option>
+                        <option value="Chinese">Chinese</option>
+                        <option value="Japanese">Japanese</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="mentorName">Mentor Name</label>
+                    <input type="text" id="mentorName" placeholder="Enter mentor's name">
+                </div>
+                <div class="form-group">
+                    <label for="mentorGrade">Mentor Grade</label>
+                    <select id="mentorGrade">
+                        <option value="">Select Grade</option>
+                        <option value="9">9th</option>
+                        <option value="10">10th</option>
+                        <option value="11">11th</option>
+                        <option value="12">12th</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="menteeName">Mentee Name</label>
+                    <input type="text" id="menteeName" placeholder="Enter mentee's name">
+                </div>
+                <div class="form-group">
+                    <label for="menteeGrade">Mentee Grade</label>
+                    <select id="menteeGrade">
+                        <option value="">Select Grade</option>
+                        <option value="9">9th</option>
+                        <option value="10">10th</option>
+                        <option value="11">11th</option>
+                        <option value="12">12th</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="sessionNotes">What was covered? (Topics, Activities, etc.)</label>
+                    <textarea id="sessionNotes" placeholder="Example: Practiced verb conjugations, worked on pronunciation of 'rr' sound, reviewed Chapter 3 vocabulary"></textarea>
+                </div>
+                <div class="form-actions">
+                    <button type="button" class="btn btn-secondary" onclick="closeModal()">Cancel</button>
+                    <button type="button" class="btn btn-delete" id="deleteBtn" onclick="deleteSession()" style="display: none;">Delete Session</button>
+                    <button type="button" class="btn btn-primary" onclick="saveSession()">Save Session</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
